@@ -32,10 +32,15 @@ class CodingFun
     {
         ksort($customerTransactions);
         $array = [];
-        foreach($customerTransactions as $key => $value) {
-          $arrays = explode("=", $value);
-        	$array1[$arrays[0]] = $arrays[1];
-        }
+      $array1 = [];
+      foreach($customerTransactions as $key => $value) {
+        $arrays = explode("=", $value);
+      	if(array_key_exists($arrays[0],$array1)) {
+      		$array1[$arrays[0]] += $arrays[1];
+      	} else {
+      		$array1[$arrays[0]] = $arrays[1];
+      	}
+      }
         return $array1;
     }
 
