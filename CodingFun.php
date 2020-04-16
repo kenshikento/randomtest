@@ -47,7 +47,7 @@ class CodingFun
     public function getLotteryWinnings($totalWinnings, $winningNumber, $players)
     {
     	$winners = [];
-  		foreach($player as $key => $value) {
+  		foreach($players as $key => $value) {
 			  if($value === $winningNumber) {
 			  	$winners[] = $key;
 		    }
