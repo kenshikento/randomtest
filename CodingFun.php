@@ -61,6 +61,6 @@ class CodingFun
 		foreach($winners as $value) {
 			  $list[$value] = $playAward;
 		}
-		  return list;
+		  return $list;
     }
 }
