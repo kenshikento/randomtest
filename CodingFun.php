@@ -57,7 +57,8 @@ class CodingFun
 		$winnerCount = count($winners);
     
     if(!$winnerCount) {
-      return null;
+      $emptyResult = [];
+      return $emptyResult;
     }
     
 		$playAward = $totalWinnings / $winnerCount;
@@ -66,6 +67,8 @@ class CodingFun
 		foreach($winners as $value) {
 			  $list[$value] = $playAward;
 		}
+    
+    ksort($list);
 		  return $list;
     }
 }
