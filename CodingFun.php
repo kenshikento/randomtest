@@ -32,8 +32,8 @@ class CodingFun
     {
         ksort($customerTransactions);
         $array = [];
-      $array1 = [];
-      foreach($customerTransactions as $key => $value) {
+        $array1 = [];
+        foreach($customerTransactions as $key => $value) {
         $arrays = explode("=", $value);
       	if(array_key_exists($arrays[0],$array1)) {
       		$array1[$arrays[0]] += $arrays[1];
@@ -46,6 +46,21 @@ class CodingFun
 
     public function getLotteryWinnings($totalWinnings, $winningNumber, $players)
     {
-        //
+    	$winners = [];
+  		foreach($player as $key => $value) {
+			  if($value === $winningNumber) {
+			  	$winners[] = $key;
+		    }
+  			
+  		}
+
+		$winnerCount = count($winners);
+		$playAward = $totalWinnings / $winnerCount;
+		$list = [];
+    
+		foreach($winners as $value) {
+			  $list[$value] = $playAward;
+		}
+		  return list;
     }
 }
