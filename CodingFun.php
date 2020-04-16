@@ -56,7 +56,7 @@ class CodingFun
 
 		$winnerCount = count($winners);
     
-    if($winnerCount) {
+    if(!$winnerCount) {
       return null;
     }
     
