@@ -31,7 +31,12 @@ class CodingFun
     public function getCustomerBalances($customerTransactions)
     {
         ksort($customerTransactions);
-        return $customerTransactions;
+        $array = [];
+        foreach($customerTransactions as $key => $value) {
+          $arrays = explode("=", $value);
+        	$array1[$arrays[0]] = $arrays[1];
+        }
+        return $array1;
     }
 
     public function getLotteryWinnings($totalWinnings, $winningNumber, $players)
