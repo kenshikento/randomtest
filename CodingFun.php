@@ -55,6 +55,11 @@ class CodingFun
   		}
 
 		$winnerCount = count($winners);
+    
+    if($winnerCount) {
+      return null;
+    }
+    
 		$playAward = $totalWinnings / $winnerCount;
 		$list = [];
     
