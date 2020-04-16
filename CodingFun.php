@@ -2,7 +2,6 @@
 
 class CodingFun
 {
-
     public function getFibonacciSequence($resultArraySize)
     {
         $input = $resultArraySize;
