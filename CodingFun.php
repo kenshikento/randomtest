@@ -57,9 +57,9 @@ class CodingFun
 
 		$winnerCount = count($winners);
     
-    if(!$winnerCount) {
-      //$emptyResult = [];
-      //return $emptyResult;
+    if(!$winnerCount AND $winnerCount < 1) {
+      $emptyResult = [];
+      return $emptyResult;
     }
     
 		$playAward = $totalWinnings / $winnerCount;
