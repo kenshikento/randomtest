@@ -23,3 +23,6 @@ The six digit lottery number, total winnings and an array containing player data
 The function should return a key => value array containing the player name for the key and the winnings for the player as the value.
 Only winning players should be returned within the result.
 The result should be in alphabetical order based upon the players name.
+
+## Run Test
+- Run `./vendor/bin/phpunit tests/CodingFunTest.php `
